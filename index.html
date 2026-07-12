@@ -93,6 +93,67 @@ body{background:#0a0a0a;color:#f0f0f0;font-family:'Roboto',sans-serif;min-height
 .footer{text-align:center;margin-top:3rem;padding:2rem 1rem;border-top:1px solid #161616;font-size:.75rem;color:#333;letter-spacing:1px}
 .footer strong{color:#cc0000}
 audio{display:none}
+/* SECCIÓN FOTOS DE LA BANDA */
+.band-photo-container {
+    text-align: center;
+    margin: 3rem 0;
+}
+.band-photo {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(204, 0, 0, 0.3);
+    border: 2px solid #1a1a1a;
+    transition: transform 0.3s ease;
+}
+.band-photo:hover {
+    transform: scale(1.02);
+    border-color: #cc0000;
+}
+
+/* GRID DE INTEGRANTES */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 1rem;
+}
+.member-card {
+    background: #111;
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.member-card:hover {
+    border-color: #cc0000;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(204, 0, 0, 0.2);
+}
+.member-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 2px solid #cc0000;
+}
+.member-role {
+    padding: 15px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    color: #fff;
+}
+.member-role span {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    color: #888;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    font-weight: 300;
+    text-transform: none;
+}
 </style>
 </head>
 <body>
@@ -148,6 +209,28 @@ audio{display:none}
         <svg width="20" height="20" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zm2-8.14L11.03 12 8 14.14V9.86zM16 6h2v12h-2z"/></svg>
       </button>
       <span class="p-time" id="ptime">0:00 / 0:00</span>
+    </div>
+  </div>
+  <!-- SECCIÓN LA BANDA -->
+  <div class="sec-title">La Banda</div>
+  <div class="band-photo-container">
+    <img src="banda-grupal.jpg" alt="Hell Hippies Banda" class="band-photo">
+  </div>
+
+    <!-- SECCIÓN INTEGRANTES -->
+  <div class="sec-title">Los Integrantes</div>
+  <div class="members-grid">
+    <div class="member-card">
+      <img src="bajista.jpg" alt="Luis Javier SAO - Bajo">
+      <div class="member-role">BAJO<span>Luis Javier SAO</span></div>
+    </div>
+    <div class="member-card">
+      <img src="guitarrista.jpg" alt="Salvattore Savage - Guitarra">
+      <div class="member-role">GUITARRA<span>Salvattore Savage</span></div>
+    </div>
+    <div class="member-card">
+      <img src="baterista.jpg" alt="Jesus Arrieta - Batería">
+      <div class="member-role">BATERÍA<span>Jesus Arrieta</span></div>
     </div>
   </div>
 
