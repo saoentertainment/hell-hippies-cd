@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hell Hippies – Let the Sins Begin</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0a0a;color:#f0f0f0;font-family:'Roboto',sans-serif;min-height:100vh}
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://saoentertainment.github.io/hell-hippies-cd/">
+<meta property="og:title" content="Hell Hippies – Let the Sins Begin">
+<meta property="og:description" content="CD Digital de Hell Hippies. Escucha nuestro álbum completo y descárgalo gratis. Power Trio de Rock Clásico desde Ciudad de México.">
+<meta property="og:image" content="https://saoentertainment.github.io/hell-hippies-cd/logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://saoentertainment.github.io/hell-hippies-cd/">
+<meta property="twitter:title" content="Hell Hippies – Let the Sins Begin">
+<meta property="twitter:description" content="CD Digital de Hell Hippies. Escucha nuestro álbum completo y descárgalo gratis. Power Trio de Rock Clásico desde Ciudad de México.">
+<meta property="twitter:image" content="https://saoentertainment.github.io/hell-hippies-cd/logo.png">
+
+<!-- Tema visual -->
+<meta name="theme-color" content="#cc0000">
+/* HERO */
+.hero{background:#0d0000;border-bottom:3px solid #cc0000;padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 40px,rgba(160,0,0,0.04) 40px,rgba(160,0,0,0.04) 80px);pointer-events:none}
+.hero-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:1.2rem}
+
+/* LOGO FIJO */
+.cover-ring{width:220px;height:220px;border-radius:50%;overflow:hidden;border:4px solid #cc0000;box-shadow:0 0 0 8px #1a0000, 0 0 40px rgba(200,0,0,0.3);flex-shrink:0;background:#0a0a0a;display:flex;align-items:center;justify-content:center}
+.cover-ring img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+
+.band-name{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;letter-spacing:10px;color:#fff;line-height:1}
+.band-name span{color:#cc0000}
+.album-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:6px;color:#cc0000;margin-top:-.2rem}
+.album-sub{font-size:0.78rem;letter-spacing:4px;color:#555;text-transform:uppercase}
+.divider{width:60px;height:2px;background:#cc0000;margin:0.8rem 0}
+.tagline{font-size:1rem;color:#ccc;font-weight:300;letter-spacing:1px;max-width:520px;line-height:1.6}
+
+/* CONTENIDO */
+.content{max-width:780px;margin:0 auto;padding:0 1.2rem 2rem}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:4px;color:#cc0000;margin:2.4rem 0 .9rem;border-left:3px solid #cc0000;padding-left:12px}
+
+.instr{background:#111;border:1px solid #1e1e1e;border-radius:8px;padding:1.2rem 1.5rem;font-size:0.86rem;color:#888;line-height:2}
+.instr strong{color:#cc0000}
+
+/* BOTÓN DESCARGA EXTERNA */
+.dl-external{display:flex;justify-content:center;margin:2rem 0 1rem}
+.btn-ext{background:#fff;color:#000;border:none;padding:16px 40px;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:3px;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all .2s;box-shadow:0 4px 15px rgba(255,255,255,0.1)}
+.btn-ext:hover{background:#cc0000;color:#fff;transform:translateY(-2px)}
+.btn-ext svg{width:20px;height:20px;fill:currentColor}
+
+/* BOTÓN WHATSAPP */
+.btn-wa{background:#25D366;color:#fff;border:none;padding:14px 38px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:3px;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:background .2s;margin:0 auto}
+.btn-wa:hover{background:#1ebe5a}
+.btn-wa svg{width:18px;height:18px;fill:#fff}
+.wa-container{display:flex;justify-content:center;margin:2rem 0 1rem}
+
+/* TRACKLIST */
+.track{display:grid;grid-template-columns:32px 36px 1fr;align-items:center;gap:12px;padding:13px 15px;background:#111;border:1px solid #1a1a1a;border-radius:6px;margin-bottom:7px;transition:all .2s}
+.track:hover{border-color:#3a0000;background:#130000}
+.track.playing{border-color:#cc0000;background:#160000}
+.tnum{font-family:'Bebas Neue',sans-serif;font-size:1.05rem;color:#333;text-align:center}
+.track.playing .tnum{color:#cc0000}
+.tplay{width:33px;height:33px;border-radius:50%;background:transparent;border:1.5px solid #282828;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;flex-shrink:0;padding:0}
+.tplay:hover{border-color:#cc0000;background:#180000}
+.track.playing .tplay{border-color:#cc0000;background:#cc0000}
+.tplay svg{width:12px;height:12px;fill:#777;margin-left:2px}
+.track.playing .tplay svg{fill:#fff;margin-left:0}
+.tinfo{min-width:0}
+.ttitle{font-size:0.93rem;font-weight:700;color:#eee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.track.playing .ttitle{color:#fff}
+.tdur{font-size:0.72rem;color:#444;margin-top:2px}
+
+/* PLAYER */
+.player{background:#0e0e0e;border:1px solid #1c1c1c;border-top:2px solid #cc0000;border-radius:8px;padding:1.3rem 1.5rem;margin-top:1.3rem}
+.p-label{font-size:0.7rem;letter-spacing:2px;color:#444;text-transform:uppercase;margin-bottom:3px}
+.p-title{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:2px;color:#eee;margin-bottom:10px;min-height:1.5rem}
+.p-prog{width:100%;height:4px;background:#1c1c1c;border-radius:2px;margin-bottom:10px;cursor:pointer}
+.p-bar{height:4px;background:#cc0000;border-radius:2px;width:0%;transition:width .4s linear}
+.p-ctrl{display:flex;align-items:center;gap:14px}
+.cbtn{background:none;border:none;cursor:pointer;padding:5px;display:flex;align-items:center;opacity:.6;transition:opacity .2s}
+.cbtn:hover{opacity:1}
+.cbtn svg{fill:#eee}
+.p-time{font-size:.75rem;color:#444;margin-left:auto;font-variant-numeric:tabular-nums}
+
+/* FOOTER */
+.footer{text-align:center;margin-top:3rem;padding:2rem 1rem;border-top:1px solid #161616;font-size:.75rem;color:#333;letter-spacing:1px}
+.footer strong{color:#cc0000}
+audio{display:none}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="cover-ring">
+      <img src="logo.png" alt="Hell Hippies" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'color:#cc0000;font-family:Bebas Neue;font-size:2rem;letter-spacing:5px\'>HELL<br>HIPPIES</div>'">
+    </div>
+    <div>
+      <div class="band-name">HELL <span>HIPPIES</span></div>
+      <div class="album-title">Let the Sins Begin...</div>
+      <div class="album-sub">Edición Especial &mdash; CD Digital</div>
+    </div>
+    <div class="divider"></div>
+    <div class="tagline">¡Gracias por ser parte de nuestros Servicios Musicales! Este disco es un pequeño obsequio para ti, por ser un cliente VIP.</div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="sec-title">Instrucciones</div>
+  <div class="instr">
+    <strong>Escucha en línea:</strong> Presiona ▶ en cualquier canción para escucharla directamente aquí.<br>
+    <strong>Descarga gratuita:</strong> Si quieres tener el disco completo en tu dispositivo, usa el botón de abajo.
+  </div>
+
+  <!-- BOTÓN DE DESCARGA EXTERNA -->
+  <div class="dl-external">
+    <a class="btn-ext" href="https://drive.google.com/drive/folders/1YiyQUCfKPexY2izBUa5OGWBgzMBu3CMq?usp=drive_link" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+      Descargar Disco Completo
+    </a>
+  </div>
+
+  <div class="sec-title">Canciones</div>
+  <div id="tracklist"></div>
+
+  <div class="player">
+    <div class="p-label">Reproduciendo ahora</div>
+    <div class="p-title" id="ptitle">— Selecciona una canción —</div>
+    <div class="p-prog" id="progBar" onclick="seekAudio(event)">
+      <div class="p-bar" id="pbar"></div>
+    </div>
+    <div class="p-ctrl">
+      <button class="cbtn" onclick="prevTrack()" title="Anterior">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+      </button>
+      <button class="cbtn" id="ppbtn" onclick="togglePlay()">
+        <svg id="ppico" width="28" height="28" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <button class="cbtn" onclick="nextTrack()" title="Siguiente">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zm2-8.14L11.03 12 8 14.14V9.86zM16 6h2v12h-2z"/></svg>
+      </button>
+      <span class="p-time" id="ptime">0:00 / 0:00</span>
+    </div>
+  </div>
+
+  <!-- WHATSAPP AL FINAL -->
+  <div class="wa-container">
+    <a class="btn-wa" href="https://wa.me/5215532687918?text=¡Hola!%20Me%20encantó%20el%20CD%20de%20Hell%20Hippies%20y%20me%20interesa%20saber%20que%20otros%20Servicios%20Musicales%20manejan." target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Contáctanos por WhatsApp
+    </a>
+  </div>
+
+</div>
+
+<div class="footer">
+  &copy; 2026 &nbsp;<strong>Hell Hippies Oficial</strong>&nbsp; — Todos los derechos reservados.<br>
+  <span style="color:#3a3a3a;margin-top:5px;display:block">Power Trio de Rock Clásico &mdash; Ciudad de México</span>
+</div>
+
+<audio id="aud"></audio>
+
+<script>
+const tracks = [
+  { num:1,  title:"Introducción",                         duration:"—", mp3:"introduccion.mp3" },
+  { num:2,  title:"Alma Libre",                           duration:"—", mp3:"alma_libre.mp3" },
+  { num:3,  title:"American Band",                        duration:"—", mp3:"american_band.mp3" },
+  { num:4,  title:"Bélica",                               duration:"—", mp3:"belica.mp3" },
+  { num:5,  title:"Born to be wild",                      duration:"—", mp3:"born_to_be_wild.mp3" },
+  { num:6,  title:"Ya no quiero tu amor",                 duration:"—", mp3:"ya_no_quiero_tu_amor.mp3" },
+  { num:7,  title:"Sálvame",                              duration:"—", mp3:"salvame.mp3" },
+  { num:8,  title:"Yo soy quien (Versión editada para radio)", duration:"—", mp3:"yo_soy_quien_radio.mp3" },
+  { num:9,  title:"Yo soy quien (Versión Extendida)",     duration:"—", mp3:"yo_soy_quien_extendida.mp3" },
+];
+
+const playPath  = '<path d="M8 5v14l11-7z"/>';
+const pausePath = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+let cur = -1, playing = false;
+const aud = document.getElementById('aud');
+const ptitle = document.getElementById('ptitle');
+const pbar   = document.getElementById('pbar');
+const ptime  = document.getElementById('ptime');
+const ppico  = document.getElementById('ppico');
+
+function build(){
+  const list = document.getElementById('tracklist');
+  tracks.forEach((t,i)=>{
+    const d = document.createElement('div');
+    d.className='track'; d.id='t'+i;
+    d.innerHTML=`
+      <div class="tnum">${t.num}</div>
+      <button class="tplay" onclick="load(${i})"><svg viewBox="0 0 24 24">${playPath}</svg></button>
+      <div class="tinfo">
+        <div class="ttitle">${t.title}</div>
+        <div class="tdur">${t.duration}</div>
+      </div>`;
+    list.appendChild(d);
+  });
+}
+
+function setActive(i){
+  if(cur>=0){
+    document.getElementById('t'+cur).classList.remove('playing');
+    document.querySelector('#t'+cur+' .tplay svg').innerHTML=playPath;
+  }
+  cur=i;
+  document.getElementById('t'+i).classList.add('playing');
+  document.querySelector('#t'+i+' .tplay svg').innerHTML=pausePath;
+  ptitle.textContent=tracks[i].num+'. '+tracks[i].title;
+}
+
+function load(i){
+  if(cur===i){ togglePlay(); return; }
+  setActive(i);
+  aud.src=tracks[i].mp3;
+  aud.play().then(()=>{ playing=true; ppico.innerHTML=pausePath; }).catch(()=>{});
+}
+
+function togglePlay(){
+  if(cur<0){ load(0); return; }
+  if(playing){
+    aud.pause(); playing=false; ppico.innerHTML=playPath;
+    document.querySelector('#t'+cur+' .tplay svg').innerHTML=playPath;
+  } else {
+    aud.play().catch(()=>{}); playing=true; ppico.innerHTML=pausePath;
+    document.querySelector('#t'+cur+' .tplay svg').innerHTML=pausePath;
+  }
+}
+
+function nextTrack(){ if(cur<tracks.length-1) load(cur+1); }
+function prevTrack(){ if(cur>0) load(cur-1); }
+function seekAudio(e){
+  if(aud.duration){
+    const r=document.getElementById('progBar').getBoundingClientRect();
+    aud.currentTime=((e.clientX-r.left)/r.width)*aud.duration;
+  }
+}
+function fmt(s){ const m=Math.floor(s/60),sec=Math.floor(s%60); return m+':'+(sec<10?'0':'')+sec; }
+aud.addEventListener('timeupdate',()=>{
+  if(aud.duration){ pbar.style.width=((aud.currentTime/aud.duration)*100).toFixed(1)+'%'; ptime.textContent=fmt(aud.currentTime)+' / '+fmt(aud.duration); }
+});
+aud.addEventListener('ended',()=>{ nextTrack(); });
+build();
+</script>
+</body>
+</html>
