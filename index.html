@@ -154,6 +154,13 @@ audio{display:none}
     text-align: center;
     font-weight: 300;
 }
+/* --- CORRECCIÓN PARA CELULARES --- */
+@media (max-width: 600px) {
+    .member-card img {
+        height: 320px;        /* Altura ajustada para que se vea más */
+        object-position: top center; /* ESTO ES CLAVE: Le dice al navegador que enfoque la parte de ARRIBA (las cabezas) */
+    }
+}
 }</style>
 </head>
 <body>
